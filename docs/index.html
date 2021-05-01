@@ -1,1 +1,60 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="description" content="Github profile page of Alex Romberg.">
+    <title>Alex Romberg</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- stylesheet -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+
+    <!-- script -->
+    <script src="js/main.js" defer></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <div id="sidebar">
+            <div id="aboutMe">
+                <img src="img/avatar.png" alt="AlexAvatar">
+                <h3>Alex Romberg</h3>
+                <p>Schweiz</p>
+            </div>
+            <div id="projectNav">
+                <h2>Projekte</h2>
+                <ul>
+                    <li id="AtomAniBtn">AtomAni</li>
+                    <li id="M152Btn">M152-Projekte</li>
+                </ul>
+            </div>
+        </div>
+        <div id="mainFrame">
+            <div id="welcome">
+                <h1>Herzlich Wilkommen</h1>
+                <p>Da diese Seite nicht so leer sein sollte, stelle ich hier meine Projekte vor.</p>
+                <p>Viel Spass beim Druchklicken!</p>
+            </div>
+            <div id="AtomAni" class="hidden">
+                <h1>AtomAni</h1>
+                <p>Ein Programm, mit dem Atome simuliert werden können.</p>
+                <p>Dies ist meine Abschlussarbeit an der IMS-Frauenfeld.</p>
+                <iframe src="https://atomani.aromberg.tech" frameborder="0"></iframe>
+                <a href="https://atomani.aromberg.tech">Webseite Besuchen</a>
+            </div>
+            <div id="M152" class="hidden">
+                <h1>M152-Projekte</h1>
+                <p>Ein Schulprojekt aus dem letzten Semester, bei dem es um JS-Animationen ging.</p>
+                <p>Design ist hier nicht 1.Priorität gewesen.</p>
+                <iframe src="https://alexromberg.github.io/M152-Projects/" frameborder="0"></iframe>
+                <a href="https://alexromberg.github.io/M152-Projects/">Webseite Besuchen</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
