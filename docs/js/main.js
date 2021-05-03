@@ -25,3 +25,13 @@ function toggelMainDiv() {
         welcomeDiv.classList.add('hidden');
     }
 }
+
+function loadHighResBG() {
+    let bg = new Image();
+    bg.onload = () => {
+        document.getElementsByTagName('body')[0].style.backgroundImage = `url('${bg.src}')`;
+    }
+    bg.src = '../img/bg.jpg';
+}
+
+loadHighResBG();
