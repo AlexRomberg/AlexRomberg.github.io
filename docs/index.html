@@ -18,18 +18,21 @@
 </head>
 
 <body>
-    <main>
+    <main class="blur">
         <div id="sidebar">
             <div id="aboutMe">
                 <img src="img/avatar.png" alt="AlexAvatar">
-                <h3>Alex Romberg</h3>
-                <p>Schweiz</p>
+                <div class="details">
+                    <h3>Alex Romberg</h3>
+                    <p>Schweiz</p>
+                </div>
             </div>
+            <hr>
             <div id="projectNav">
-                <h2>Projekte</h2>
+                <h2>Links</h2>
                 <ul>
-                    <li id="AtomAniBtn">AtomAni</li>
-                    <li id="M152Btn">M152-Projekte</li>
+                    <li id="btGH"><a href="https://github.com/alexromberg" title="GitHub/AlexRomberg">Github</a></li>
+                    <li id="btSO"><a href="https://stackoverflow.com/users/11035509/alex" title="Stackoverflow/Alex">Stackoverflow</a></li>
                 </ul>
             </div>
         </div>
@@ -39,30 +42,34 @@
                 <p>Da diese Seite nicht so leer sein sollte, stelle ich hier meine Projekte vor.</p>
                 <p>Viel Spass beim Druchklicken!</p>
                 <div id="project-list">
-                    <a class="card" href="https://atomani.aromberg.tech">
+                    <div class="card" link="https://atomani.aromberg.tech" name="AtomAni">
                         <img src="https://repository-images.githubusercontent.com/332209156/51d5d800-5d83-11eb-841d-8c33ae894998" alt="AtomAni">
-                    </a>
-                    <a class="card" href="https://alexromberg.github.io/M152-Projects/">
+                        <div class="description">
+                            <h4>AtomAni</h4>
+                            <p>
+                                Ein Programm, mit dem Atome simuliert werden können.<br>Dies ist meine Abschlussarbeit an der IMS-Frauenfeld.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" link="https://alexromberg.github.io/M152-Projects/" name="M152-Projekte">
                         <img src="img/M152.png" alt="M152-Projekte">
-                    </a>
-                    <a class="card" href="https://alexromberg.github.io/Schiffeversenken/index.html">
+                        <div class="description">
+                            <h4>M152-Animationen</h4>
+                            <p>
+                                Eine kleine Sammlung von JS-Animationen, welche im Modul M152 an der IMS-Frauenfeld entwickelt wurden.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" link="https://alexromberg.github.io/Schiffeversenken/index.html" name="Shipwreck-Protocol">
                         <img src="img/ship.png" alt="Shipwreck-Protocol">
-                    </a>
+                        <div class="description">
+                            <h4>Shipwreck-Protocol</h4>
+                            <p>
+                                Ein Protokoll für Schiffeversenken.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div id="AtomAni" class="hidden fullheight">
-                <h1>AtomAni</h1>
-                <p>Ein Programm, mit dem Atome simuliert werden können.</p>
-                <p>Dies ist meine Abschlussarbeit an der IMS-Frauenfeld.</p>
-                <iframe src="https://atomani.aromberg.tech" frameborder="0"></iframe>
-                <a href="https://atomani.aromberg.tech">Webseite Besuchen</a>
-            </div>
-            <div id="M152" class="hidden fullheight">
-                <h1>M152-Projekte</h1>
-                <p>Ein Schulprojekt aus dem letzten Semester, bei dem es um JS-Animationen ging.</p>
-                <p>Design ist hier nicht 1.Priorität gewesen.</p>
-                <iframe src="https://alexromberg.github.io/M152-Projects/" frameborder="0"></iframe>
-                <a href="https://alexromberg.github.io/M152-Projects/">Webseite Besuchen</a>
             </div>
         </div>
     </main>
