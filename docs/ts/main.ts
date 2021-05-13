@@ -7,6 +7,8 @@ class WebsiteWindow {
     private FormTitleBar: HTMLDivElement;
     private FormTitle: HTMLParagraphElement;
     private FormCloseButton: HTMLButtonElement;
+    private FormOpenInBrowser: HTMLButtonElement;
+    private FormButtonBox: HTMLDivElement;
     private FormContent: HTMLIFrameElement;
     private Title: string;
     private DeltaX: number;
@@ -27,11 +29,14 @@ class WebsiteWindow {
         this.FormTitleBar = document.createElement('div');
         this.FormTitle = document.createElement('p');
         this.FormCloseButton = document.createElement('button');
+        this.FormOpenInBrowser = document.createElement('button');
+        this.FormButtonBox = document.createElement('div');
         this.FormContent = document.createElement('iframe');
 
         this.FormContent.src = url;
         this.FormTitle.innerText = title;
         this.FormCloseButton.innerText = "X";
+        this.FormOpenInBrowser.innerText = "im Browser öffnen";
 
         this.addClasses();
         this.appendStructure();
@@ -39,6 +44,7 @@ class WebsiteWindow {
         this.FormTitleBar.addEventListener('mousedown', (e) => { this.drag(e); e.preventDefault(); return false; });
         BodyElement.addEventListener('mouseup', (e) => { this.dragEnd(e);   });
         BodyElement.addEventListener('mousemove', (e) => { this.move(e); });
+        this.FormOpenInBrowser.addEventListener('click', (e) => { this.openInBrowser(e); });
         this.FormCloseButton.addEventListener('click', (e) => { this.Form.remove(); });
     }
 
@@ -48,6 +54,7 @@ class WebsiteWindow {
         this.FormTitleBar.classList.add('form-title-bar');
         this.FormTitle.classList.add('form-title');
         this.FormCloseButton.classList.add('form-close-button');
+        this.FormOpenInBrowser.classList.add('form-open-button');
         this.FormContent.classList.add('form-content');
     }
 
@@ -56,7 +63,9 @@ class WebsiteWindow {
         this.Form.appendChild(this.FormTitleBar);
         this.Form.appendChild(this.FormContent);
         this.FormTitleBar.appendChild(this.FormTitle);
-        this.FormTitleBar.appendChild(this.FormCloseButton);
+        this.FormTitleBar.appendChild(this.FormButtonBox);
+        this.FormButtonBox.appendChild(this.FormOpenInBrowser);
+        this.FormButtonBox.appendChild(this.FormCloseButton);
     }
 
     private drag(e: MouseEvent) {
@@ -79,6 +88,10 @@ class WebsiteWindow {
             this.Form.style.left = `${this.PosX}px`;
             this.Form.style.top = `${this.PosY}px`;
         }
+    }
+
+    private openInBrowser(e: MouseEvent) {
+        window.location.href = this.FormContent.src;
     }
 }
 

@@ -190,6 +190,8 @@ main {
     left: 0px;
     width: 600px;
     height: 350px;
+    min-width: 300px;
+    min-height: 300px;
     z-index: 10;
     background-color: #fff4;
     border-radius: 5px;
@@ -202,6 +204,7 @@ main {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    background-color: #0003;
 }
 
 .form-title {
@@ -225,6 +228,17 @@ main {
 
 .form-close-button:hover {
     background-color: red;
+}
+
+.form-open-button {
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    padding: 0px 10px;
+}
+
+.form-open-button:hover {
+    background-color: #00aeff;
 }
 
 @media screen and (max-height:350px) {
